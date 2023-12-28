@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+import { RootComponent } from './root/root.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [RootComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, ToastrModule.forRoot()],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [RootComponent],
 })
-export class AppModule { }
+export class AppModule {}
